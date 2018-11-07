@@ -13,7 +13,7 @@ const ses = new AWS.SES();
 
 const params = {
     Destination: {
-        ToAddresses: ['sureshkorlapati@gmail.com']
+        ToAddresses: ['user@gmail.com']
     },
     Message: {
         Body:{
@@ -32,8 +32,8 @@ const params = {
           Data: 'Registration'
         }
     },
-    ReturnPath: 'suresh.korlapati@prodea.com',
-    Source: 'suresh.korlapati@prodea.com'
+    ReturnPath: 'user2@prodea.com',
+    Source: 'user2@prodea.com'
 };
 
 ses.sendEmail(params, (err, data) => {
