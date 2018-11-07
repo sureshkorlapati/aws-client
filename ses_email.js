@@ -1,6 +1,14 @@
-require('dotenv').config();
-
 const AWS = require('aws-sdk');
+
+const AWS_KEY = 'aws-key-id';
+const AWS_SECRET = 'aws-secret-key';
+const SNS_REGION = 'us-east-1';
+
+AWS.config.update({
+    accessKeyId: `${AWS_KEY}`,
+    secretAccessKey: `${AWS_SECRET}`,
+    region: `${SNS_REGION}`
+  });
 const ses = new AWS.SES();
 
 const params = {
